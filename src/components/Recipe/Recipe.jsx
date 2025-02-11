@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import styles from "./Recipe.module.css";
+import { RecipeContext } from "../../context/RecipeContext";
 
 export function Recipe({
   recipe: { name, ingredients, description, img, country, time },
 }) {
+  const recipe = useContext(RecipeContext);
+  console.log(recipe);
   return (
     <>
       <h2>{name}</h2>
