@@ -1,10 +1,10 @@
 import { Article } from "../Article/Article";
 import styles from "./Cookbook.module.css";
 
-export function Cookbook(props) {
+export function Cookbook({ heading, ...props }) {
   return (
     <main className={styles.main}>
-      <h1>Przepisy na smaczne rzeczy</h1>
+      <h1>{heading}</h1>
       <Article {...props} />
     </main>
   );
