@@ -1,6 +1,8 @@
 import styles from "./Recipe.module.css";
 
-export function Recipe({ name, ingredients, description, img, country, time }) {
+export function Recipe({
+  recipe: { name, ingredients, description, img, country, time },
+}) {
   return (
     <>
       <h2>{name}</h2>

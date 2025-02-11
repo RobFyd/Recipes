@@ -17,7 +17,7 @@ function App() {
         recipes={recipes}
         onSelectRecipe={(id) => setSelectedRecipeId(id)}
       />
-      <Cookbook {...selectedRecipe} heading="Cookbook - exotic dishes" />
+      <Cookbook recipe={selectedRecipe} heading="Cookbook - exotic dishes" />
     </div>
   );
 }
