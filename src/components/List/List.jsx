@@ -7,7 +7,7 @@ export function List({ recipes, onSelectRecipe }) {
   const selectedRecipe = useContext(RecipeContext);
   return (
     <nav className={styles.nav}>
-      <span className={styles.title}>Lista przepisów:</span>
+      <span className={styles.title}>List of recipes:</span>
       <ul className={styles.list}>
         {recipes.map(({ id, name }) => (
           <li key={id} className={styles.item}>

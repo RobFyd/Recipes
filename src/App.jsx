@@ -14,21 +14,24 @@ function App() {
   );
 
   return (
-    <RecipeContext.Provider value={selectedRecipe}>
+    <>
       <div className={styles.container}>
-        <List
-          recipes={recipes}
-          onSelectRecipe={(id) => setSelectedRecipeId(id)}
-        />
-        <Cookbook heading="Cookbook - exotic dishes" />
+        <RecipeContext.Provider value={selectedRecipe}>
+          <List
+            recipes={recipes}
+            onSelectRecipe={(id) => setSelectedRecipeId(id)}
+          />
+          <Cookbook heading="Cookbook - exotic dishes" />
+        </RecipeContext.Provider>
       </div>
-      <RecipeContext.Provider value={recipes[3]}>
-        <div className={styles.promoted}>
-          <h2>Recipe of the week:</h2>
+
+      <div className={styles.promoted}>
+        <h2>Recipe of the week:</h2>
+        <RecipeContext.Provider value={recipes[3]}>
           <Recipe />
-        </div>
-      </RecipeContext.Provider>
-    </RecipeContext.Provider>
+        </RecipeContext.Provider>
+      </div>
+    </>
   );
 }
 
