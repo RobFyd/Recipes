@@ -6,9 +6,11 @@ import { Cookbook } from "./components/Cookbook/Cookbook";
 import { Recipe } from "./components/Recipe/Recipe";
 import { TopBar } from "./components/TopBar/TopBar";
 import { RecipeContext } from "./context/RecipeContext";
+import { IsLoggedInStateContext } from "./context/IsLoggedInStateContext";
 
 function App() {
   const [selectedRecipeId, setSelectedRecipeId] = useState(1);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const selectedRecipe = recipes.find(
     (recipe) => recipe.id === selectedRecipeId
