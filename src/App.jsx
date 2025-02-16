@@ -17,7 +17,7 @@ function App() {
   );
 
   return (
-    <>
+    <IsLoggedInStateContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
       <TopBar />
       <div className={styles.container}>
         <RecipeContext.Provider value={selectedRecipe}>
@@ -35,7 +35,7 @@ function App() {
           <Recipe />
         </RecipeContext.Provider>
       </div>
-    </>
+    </IsLoggedInStateContext.Provider>
   );
 }
 
