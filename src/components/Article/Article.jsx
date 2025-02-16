@@ -10,7 +10,7 @@ export function Article() {
     <article>
       <Recipe />
       {isLoggedIn ? (
-        <Button onClick={() => alert("Przepis polubiony!")}>Like!</Button>
+        <Button onClick={() => alert("Recipe liked!")}>Like!</Button>
       ) : (
         <>
           <div>Log in to like this recipe</div>
